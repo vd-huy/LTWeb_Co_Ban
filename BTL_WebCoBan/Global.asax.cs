@@ -21,11 +21,11 @@ namespace BTL_WebCoBan
 
             /*Data Product*/
             List<objects.product> products = new List<objects.product>();
-            products.Add(new objects.product(1, "Natural Core Thịt gà và Phô mai 40gr cho mèo", 
-                "Natural Core Thịt gà và Phô mai 40gr cho mèo được làm hoàn toàn từ nguyên liệu tự nhiên, cung cấp nguồn dinh dưỡng an toàn cho sức khoẻ của thú cưng.\r\n\r\n- Sử dụng nguồn nguyên liệu sạch đạt tiêu chuẩn dành cho người.\r\n- Thịt gà tươi chứa hàm lượng protein cao, ít chất béo, hỗ trợ phát triển cơ bắp và xương khớp.\r\n- Làm từ phô mai tươi, thịt tươi với tiêu chuẩn như thức ăn của người.\r\n- Chứa hàm lượng taurine cao, tốt cho thị lực và tim mạch.\r\n- Bổ sung DHA và omega 3 và 6 hỗ trợ da lông\r\n\r\nXuất xứ: Hàn Quốc", 
-                "https://product.hstatic.net/200000263355/product/z5293235651169_61677a0f509e4042d02afe94bc91f2fc_891da09db1af45dbbcfdb33d0b16312f_master.jpg", 
-                45000, 
-                "Natural Core", 
+            products.Add(new objects.product(1, "Natural Core Thịt gà và Phô mai 40gr cho mèo",
+                "Natural Core Thịt gà và Phô mai 40gr cho mèo được làm hoàn toàn từ nguyên liệu tự nhiên, cung cấp nguồn dinh dưỡng an toàn cho sức khoẻ của thú cưng.\r\n\r\n- Sử dụng nguồn nguyên liệu sạch đạt tiêu chuẩn dành cho người.\r\n- Thịt gà tươi chứa hàm lượng protein cao, ít chất béo, hỗ trợ phát triển cơ bắp và xương khớp.\r\n- Làm từ phô mai tươi, thịt tươi với tiêu chuẩn như thức ăn của người.\r\n- Chứa hàm lượng taurine cao, tốt cho thị lực và tim mạch.\r\n- Bổ sung DHA và omega 3 và 6 hỗ trợ da lông\r\n\r\nXuất xứ: Hàn Quốc",
+                "https://product.hstatic.net/200000263355/product/z5293235651169_61677a0f509e4042d02afe94bc91f2fc_891da09db1af45dbbcfdb33d0b16312f_master.jpg",
+                45000,
+                "Natural Core",
                 10));
 
             products.Add(new objects.product(2, "Cat Tree - Trụ mèo cào Lạc đà",
@@ -167,6 +167,13 @@ namespace BTL_WebCoBan
               80000,
               "Royal Canin",
               10));
+
+            products.Add(new objects.product(21, "Đầm Caro Ren viền thêu Trái dâu",
+              "Khách có thể inbox chọn màu mỗi mẫu, shop sẽ ưu tiên gửi khách đúng màu nếu kho còn, nếu kho hết shop xin phép giao màu ngẫu nhiên ạ \r\n❤ Khách có thể để lại sđt để shop tiện liên hệ nhé \r\n\r\nBạn inbox cho shop giống cún, mèo và cân nặng, tụi mình tư vấn size để bạn đặt hàng cho đúng ạ ",
+              "https://product.hstatic.net/200000263355/product/z5005578103354_f3ee49ef4326fc8fa59899524620a7f7_68430a9267c24876a791f643a1db6e6a_master.jpg",
+              195000,
+              "Royal Canin",
+              0));
 
         }
 
