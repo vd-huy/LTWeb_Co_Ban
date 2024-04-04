@@ -16,7 +16,7 @@ namespace BTL_WebCoBan
 
             /*Data User*/
             List<objects.user> users = new List<objects.user>();
-            users.Add(new objects.user("Huy", "Vũ", "0964129650", "nhokvip004@gmail.com", "123456"));
+            users.Add(new objects.user("Huy", "Vũ", "nohope1423", "nhokvip004@gmail.com", "123456"));
             Application["users"] = users;
 
             /*Data Product*/
