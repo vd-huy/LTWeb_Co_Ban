@@ -27,7 +27,7 @@ namespace BTL_WebCoBan.pages
                     if (user.userName == userName && user.password == passWord)
                     {
                         Session["user"] = user;
-                        
+                        errorLogin.InnerHtml = "Success";
                     }
                     else
                     {

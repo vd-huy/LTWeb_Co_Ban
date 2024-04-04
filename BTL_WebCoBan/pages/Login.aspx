@@ -16,7 +16,8 @@ Inherits="BTL_WebCoBan.pages.Login" %>
         <link rel="stylesheet" href="../styles/login.css">
     </head>
     <body>
-        <form id="formLogin" runat="server" method="post" onsubmit="return checkLogin()">
+        <form id="formLogin" runat="server" method="post"
+            onsubmit="return checkLogin(event)">
             <div class="login__image">
                 <img
                     src="https://img.freepik.com/free-photo/computer-security-with-login-password-padlock_107791-16191.jpg"
@@ -29,8 +30,8 @@ Inherits="BTL_WebCoBan.pages.Login" %>
                 <input type="text" name="userName" runat="server"
                     placeholder="Enter your user name ..." id="userName" />
                 <h6 class="error"></h6>
-                <input type="text" name="passWord" runat="server"
-                    placeholder="Enter your Password ..." id="passWord" />
+                <input type="password" name="passWord" runat="server"
+                    placeholder="Enter your Password ..." id="passWord"  />
                 <h6 class="error"></h6>
 
                 <div class="container__action">
@@ -41,19 +42,21 @@ Inherits="BTL_WebCoBan.pages.Login" %>
                         <label for="rememberMe">Remember Me</label>
                     </div>
 
-                    <a href="#">Forgot Password</a>
+                    <a href="./SignUp.aspx">You don't have account</a>
                 </div>
 
-                <asp:Button CssClass="btnLogin" ID="btnLogin" runat="server" Text="Login" 
-                    OnClick="btnLogin_Click"/>
+                <asp:button CssClass="btnLogin" ID="btnLogin" runat="server"
+                    Text="Login"
+                    OnClick="btnLogin_Click"  />
 
-                <div runat="server" id="errorLogin" style="color: red;font-weight: 300;margin: 10px;"></div>
+                <div runat="server" id="errorLogin"
+                    style="color: red;font-weight: 300;margin: 10px;"></div>
             </div>
         </form>
 
         <script>
-            const checkLogin = () => {
-               /* e.preventDefault()*/
+            const checkLogin = (e) => {
+                
                 const  userName = document.querySelector('#userName').value.trim();
                 const passWord = document.querySelector("#passWord").value.trim();
                 const errors = document.getElementsByClassName("error");
