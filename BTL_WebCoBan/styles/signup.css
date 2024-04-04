@@ -1,0 +1,33 @@
+﻿#formSignUp {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#userName,
+#passWord,
+#email,
+#firstName,
+#lastName {
+  height: 20px;
+  border: none;
+  background-color: #edf2f5;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: content-box;
+  outline: none;
+}
+
+.btnSignUp {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: content-box;
+  outline: none;
+  background-color: #6c63ff;
+  color: white;
+  margin-top: 10px;
+}
