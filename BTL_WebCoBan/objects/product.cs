@@ -13,7 +13,7 @@ namespace BTL_WebCoBan.objects
         private string img;
         private double price;
         private string brand;
-        private int discount;
+        private double discount;
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
@@ -21,11 +21,11 @@ namespace BTL_WebCoBan.objects
         public string Img { get => img; set => img = value; }
         public double Price { get => price; set => price = value; }
         public string Brand { get => brand; set => brand = value; }
-        public int Discount { get => discount; set => discount = value; }
+        public double Discount { get => discount; set => discount = value; }
 
         public product() { }
 
-        public product(int id, string name, string description, string img, double price, string brand, int discount)
+        public product(int id, string name, string description, string img, double price, string brand, double discount)
         {
             this.id = id;
             this.name = name;
