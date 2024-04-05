@@ -26,7 +26,7 @@ Inherits="BTL_WebCoBan.SignUp" %>
                     alt="imgage Login">
             </div>
             <div class="container">
-                <h3 class="container__titel">Login</h3>
+                <h3 class="container__titel">Sign Up</h3>
                 <p class="container__description">Lorem ipsum dolor sit, amet
                     consectetur adipisicing elit. </p>
                 <input type="text" name="firstName"
