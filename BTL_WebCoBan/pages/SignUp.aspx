@@ -52,7 +52,7 @@ Inherits="BTL_WebCoBan.SignUp" %>
                         <label for="rememberMe">Remember Me</label>
                     </div>
 
-                    <a href="./login.aspx">You have account</a>
+                    <a href="./Login.aspx">You have account</a>
                 </div>
 
                 <asp:button CssClass="btnSignUp" ID="btnSignUp" runat="server"

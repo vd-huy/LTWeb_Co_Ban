@@ -68,10 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="pages\Cart.aspx" />
     <Content Include="pages\HomePage.aspx" />
     <Content Include="pages\Login.aspx" />
     <Content Include="pages\SignUp.aspx" />
-    <Content Include="styles\homePage.css" />
+    <Content Include="styles\cart.css" />
+    <Content Include="styles\home.css" />
     <Content Include="styles\login.css" />
     <Content Include="styles\signup.css" />
     <Content Include="Web.config" />
@@ -81,7 +83,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="objects\product.cs" />
+    <Compile Include="objects\productInCart.cs" />
     <Compile Include="objects\user.cs" />
+    <Compile Include="pages\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

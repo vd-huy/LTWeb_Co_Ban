@@ -6,7 +6,7 @@ Inherits="BTL_WebCoBan.pages.HomePage" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title></title>
-        <link rel="stylesheet" href="../styles/homePage.css">
+        
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -16,6 +16,7 @@ Inherits="BTL_WebCoBan.pages.HomePage" %>
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
             rel="stylesheet">
+        <link rel="stylesheet" href="../styles/home.css">
     </head>
     <body>
 
@@ -49,9 +50,11 @@ Inherits="BTL_WebCoBan.pages.HomePage" %>
                         </ul>
                     </nav>
 
-                    <img
-                        src="https://theme.hstatic.net/200000263355/1001161916/14/logo.png?v=65"
-                        alt="logo" class="header__logo">
+                    <a href="HomePage.aspx">
+                        <img
+                            src="https://theme.hstatic.net/200000263355/1001161916/14/logo.png?v=65"
+                            alt="logo" class="header__logo">
+                    </a>
                 </div>
 
                 <div class="header__search">
@@ -61,16 +64,21 @@ Inherits="BTL_WebCoBan.pages.HomePage" %>
 
                 <div class="header__controls">
                     <i class="header__controls--user fa-regular fa-user"></i>
-
-                    <i
-                        class="header__controls--cart fa-solid fa-cart-shopping"></i>
+                    
+                    <a href="Cart.aspx" style="color: black;">
+                    <i class="header__controls--cart fa-solid fa-cart-shopping" ></i>
+                    </a>
                 </div>
             </header>
 
             <ul class="menu">
-                <li class="menu__home"><i class="fa-solid fa-house"></i></li>
+                <li class="menu__home">
+                    <a href="Cart.aspx" style="color: #522f1f;">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
                 <li class="menu__item">Mua Đồ cho chó</li>
-                <li class="menu__item menu__item--active">Mua Đồ cho méo</li>
+                <li class="menu__item menu__item--active">Mua Đồ cho mèo</li>
                 <li class="menu__item">PETTAG MOZZI</li>
                 <li class="menu__item">Dịch vụ Spa</li>
                 <li class="menu__item">Khuyến mãi</li>
@@ -212,6 +220,15 @@ Inherits="BTL_WebCoBan.pages.HomePage" %>
             </div>
 
         </footer>
+
+       
+        <script type="text/javascript">
+            const countCart = document.querySelector('.header__controls--cart');
+
+            var countProductInCart = <%= getProductInCarts()%>
+
+                countCart.setAttribute("data-total", countProductInCart);
+        </script>
 
     </body>
 </html>
