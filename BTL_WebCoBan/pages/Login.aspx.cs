@@ -27,11 +27,12 @@ namespace BTL_WebCoBan.pages
                     if (user.userName == userName && user.password == passWord)
                     {
                         Session["user"] = user;
-                        errorLogin.InnerHtml = "Success";
+                        Session["userName"] = user.userName;
+                        Response.Redirect("HomePage.aspx");
                     }
                     else
                     {
-                        errorLogin.InnerHtml = "ERROR: Wrong phone number or password!";
+                        errorLogin.InnerHtml = "ERROR: Wrong UserName or Password!";
                     }
                 }
             }

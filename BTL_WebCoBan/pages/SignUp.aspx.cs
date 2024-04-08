@@ -49,10 +49,6 @@ namespace BTL_WebCoBan
                     errorLogin.InnerHtml = "Đăng ký thành công";
                     users.Add(new objects.user(firstName,lastName,userName,email,passWord));
 
-                    /*Thread.Sleep(5000);
-                    Response.Redirect("Login.aspx");*/
-
-
                 }
             }
 

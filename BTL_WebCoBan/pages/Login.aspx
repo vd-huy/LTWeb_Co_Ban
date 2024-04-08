@@ -42,7 +42,7 @@ Inherits="BTL_WebCoBan.pages.Login" %>
                         <label for="rememberMe">Remember Me</label>
                     </div>
 
-                    <a href="./SignUp.aspx">You don't have account</a>
+                    <a href="SignUp.aspx">You don't have account</a>
                 </div>
 
                 <asp:button CssClass="btnLogin" ID="btnLogin" runat="server"
@@ -63,8 +63,9 @@ Inherits="BTL_WebCoBan.pages.Login" %>
                 let check = true;
                 if(userName === ""){
                     errors[0].innerHTML = "Please  fill out User Name...";
-                    userName.focus();
                     check = false;
+                    /*userName.focus();*/
+                    e.preventDefault();
                 }else{
                     errors[0].innerHTML = "";
                     check=true;
@@ -72,7 +73,8 @@ Inherits="BTL_WebCoBan.pages.Login" %>
                 if(passWord === ""){
                     errors[1].innerHTML = "Please  fill out Password...";
                     check = false;
-                    passWord.forcus();
+                   /* passWord.focus();*/
+                    e.preventDefault();
                 }else{
                     errors[1].innerHTML = "";
                     check=true;

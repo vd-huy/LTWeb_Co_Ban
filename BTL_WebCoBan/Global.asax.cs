@@ -177,6 +177,13 @@ namespace BTL_WebCoBan
 
             Application["products"] = products;
 
+            /*product in cart*/
+            List<objects.productInCart> productInCarts = new List<objects.productInCart>();
+
+            productInCarts.Add(new objects.productInCart(products[0], "nohope1423", 2));
+            productInCarts.Add(new objects.productInCart(products[1], "nohope1423", 1));
+            Application["productInCarts"] = productInCarts;
+
         }
 
         protected void Session_Start(object sender, EventArgs e)
