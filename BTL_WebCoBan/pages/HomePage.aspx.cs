@@ -72,12 +72,14 @@ namespace BTL_WebCoBan.pages
                 productInCarts.ForEach(product => {
                     if (Session["userName"] == product.UserName)
                     {
-                         countProduct += product.Count;
+                         countProduct += product.CountProduct;
                     }
                 });
 
                 return countProduct;
             }
         }
+
+
     }
 }

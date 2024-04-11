@@ -9,19 +9,19 @@ namespace BTL_WebCoBan.objects
     {
         private objects.product product;
         private string userName;
-        private int count;
+        private int countProduct;
 
         public productInCart() { }
 
-        public productInCart(objects.product product, string userName, int count)
+        public productInCart(objects.product product, string userName, int countProduct)
         {
             this.product = product;
             this.userName = userName;
-            this.count = count;
+            this.countProduct = countProduct;
         }
 
         public objects.product Product { get => product; set => product = value; }
         public string UserName { get => userName; set => userName = value; }
-        public int Count { get => count; set => count = value; }
+        public int CountProduct { get => countProduct; set => countProduct = value; }
     }
 }

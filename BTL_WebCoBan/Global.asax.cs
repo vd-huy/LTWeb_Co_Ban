@@ -17,6 +17,7 @@ namespace BTL_WebCoBan
             /*Data User*/
             List<objects.user> users = new List<objects.user>();
             users.Add(new objects.user("Huy", "Vũ", "nohope1423", "nhokvip004@gmail.com", "123456"));
+            users.Add(new objects.user("Huy", "Vũ", "admin", "admin@gmail.com", "123456"));
             Application["users"] = users;
 
             /*Data Product*/
@@ -182,6 +183,7 @@ namespace BTL_WebCoBan
 
             productInCarts.Add(new objects.productInCart(products[0], "nohope1423", 2));
             productInCarts.Add(new objects.productInCart(products[1], "nohope1423", 1));
+            productInCarts.Add(new objects.productInCart(products[1], "admin", 2));
             Application["productInCarts"] = productInCarts;
 
         }

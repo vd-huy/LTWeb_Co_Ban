@@ -12,6 +12,10 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.txb{
+    display: none;
+}
+
 .topbar {
     width: 100%;
     background-color: var(--color-primary);
