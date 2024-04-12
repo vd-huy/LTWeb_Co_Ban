@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Images\nodata.jpg" />
     <Content Include="pages\Cart.aspx" />
     <Content Include="pages\HomePage.aspx" />
     <Content Include="pages\Login.aspx" />

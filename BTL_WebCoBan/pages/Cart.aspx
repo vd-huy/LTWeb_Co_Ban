@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Cart</title>
     <link rel="stylesheet" href="../styles/cart.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -49,9 +49,11 @@
                      </ul>
                  </nav>
 
-                 <img
-                     src="https://theme.hstatic.net/200000263355/1001161916/14/logo.png?v=65"
-                     alt="logo" class="header__logo">
+                 <a href="HomePage.aspx">
+                     <img
+                         src="https://theme.hstatic.net/200000263355/1001161916/14/logo.png?v=65"
+                         alt="logo" class="header__logo">
+                 </a>
              </div>
 
              <div class="header__search">
@@ -225,7 +227,7 @@
                  countCart.setAttribute("data-total", countProductInCart);
                  price = <%=  getTotalPrice()%>
                 
-                 totalPrice.innerHTML = `${price}₫`;
+                     totalPrice.innerHTML = `${price.toLocaleString('en-US') }₫`;
          })
          
          plus.forEach((item,index)=>{
@@ -240,10 +242,6 @@
                      countProductTotal.innerHTML = ` ${countProductInCart} sản phẩm`;
 
                  countCart.setAttribute("data-total", countProductInCart);
-                 price = <%=  getTotalPrice()%>
-
-                 totalPrice.innerHTML = `${price}₫`;
-
                  
              })
          })
@@ -264,9 +262,7 @@
                          countProductTotal.innerHTML = ` ${countProductInCart} sản phẩm`;
 
                      countCart.setAttribute("data-total", countProductInCart);
-                     price = <%=  getTotalPrice()%>
-
-                         totalPrice.innerHTML = `${price}₫`;
+                    
                  } else {
                      alert("You must have at least one item in your shopping cart.");
                  }

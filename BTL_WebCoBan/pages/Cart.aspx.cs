@@ -1,6 +1,7 @@
 ﻿using BTL_WebCoBan.objects;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -33,32 +34,46 @@ namespace BTL_WebCoBan.pages
                     }
                 }
             }
-            if (strIndexDelete != null)
+            if (strIndexDelete != null && listProductCarts.Count > 0)
             {
                 int.TryParse(strIndexDelete, out indexDelete);
                 listProductCarts.RemoveAt(indexDelete);
+               
             }
-            foreach (objects.productInCart product in listProductCarts)
+
+            if (listProductCarts.Count > 0)
             {
-                if (product.UserName == Session["userName"])
+                foreach (objects.productInCart product in listProductCarts)
                 {
-                    double priceDisCount = product.Product.Price * (1 - product.Product.Discount);
-                    html += "<div class='cart__product--item'>"
-                        + "<div class='product__item--detail'>"
-                        + "<img src='" + product.Product.Img + "' alt='cart product'>"
-                        + "<div> <h5 class='product__item--name'>" + product.Product.Name + "</h5> "
-                        + "<h5 class= product__item--price >" + priceDisCount + "</h5> </div> "
-                        + "</div> <div class='product__item--action'> "
-                        + "<div class='item__count'>"
-                        + "<button class='item__count--icon minus'><i class='fa-solid fa-minus'></i></button>"
-                        + "<span class='count'>" + product.CountProduct + "</span>"
-                        + "<button class='item__count--icon plus' ><i class='fa-solid fa-plus'></i></button></div> "
-                        + "<button class='action__delete'>Xóa</button></div></div>";
+                    if (product.UserName == Session["userName"])
+                    {
+                        double priceDisCount = product.Product.Price * (1 - product.Product.Discount);
+                        string strPrice = priceDisCount.ToString("#,##0");
+                        html += "<div class='cart__product--item'>"
+                            + "<div class='product__item--detail'>"
+                            + "<img src='" + product.Product.Img + "' alt='cart product'>"
+                            + "<div> <h5 class='product__item--name'>" + product.Product.Name + "</h5> "
+                            + "<h5 class= product__item--price >" + strPrice + "</h5> </div> "
+                            + "</div> <div class='product__item--action'> "
+                            + "<div class='item__count'>"
+                            + "<button class='item__count--icon minus'><i class='fa-solid fa-minus'></i></button>"
+                            + "<span class='count'>" + product.CountProduct + "</span>"
+                            + "<button class='item__count--icon plus' ><i class='fa-solid fa-plus'></i></button></div> "
+                            + "<button class='action__delete'>Xóa</button></div></div>";
+                    }
                 }
+            }
+            else
+            {
+                html += "<center>" +
+                    "<img src='../Images/nodata.jpg'" +
+                    "alt='No Product In Cart '> " +
+                    "</center>";
             }
             
 
             cartList.InnerHtml = html;
+
         }
 
         protected double getTotalPrice()
@@ -73,11 +88,12 @@ namespace BTL_WebCoBan.pages
                 {    
                     double priceDisCount = product.Product.Price * (1 - product.Product.Discount);
                     double price = priceDisCount * product.CountProduct ;
+                    
                     totalPrice += price;
                 }
             }
 
-            return totalPrice;
+            return totalPrice ;
         }
 
         //protected int[] getCountProduct()

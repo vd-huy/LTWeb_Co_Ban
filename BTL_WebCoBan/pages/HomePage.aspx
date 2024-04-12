@@ -1,11 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs"
-Inherits="BTL_WebCoBan.pages.HomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="BTL_WebCoBan.pages.HomePage" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
-        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
         
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -16,7 +17,8 @@ Inherits="BTL_WebCoBan.pages.HomePage" %>
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="../styles/home.css">
+        <%--<link rel="stylesheet" href="../styles/home.css">--%>
+        <link href="~/Styles/home.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
     </head>
     <body>
 
@@ -73,7 +75,7 @@ Inherits="BTL_WebCoBan.pages.HomePage" %>
 
             <ul class="menu">
                 <li class="menu__home">
-                    <a href="Cart.aspx" style="color: #522f1f;">
+                    <a href="HomePage.aspx" style="color: #522f1f;">
                         <i class="fa-solid fa-house"></i>
                     </a>
                 </li>
