@@ -24,13 +24,13 @@ namespace BTL_WebCoBan.pages
                     if (product.Discount > 0)
                     {
                         double priceDisCount = product.Price * (1 - product.Discount);
-
+                        string strPrice = priceDisCount.ToString("#,##0");
 
                         html += " <div class='product__item' '> "
                              + "<img class='product__item--img' src='" + product.Img + "' alt='Image Product'>"
                             + "<h5 class='product__item--name'>" + product.Name + "</h5>"
-                            + "<span class='product__item--price'>" + priceDisCount + "₫" + "</span>"
-                            + "<span class='lineThrough'>" + product.Price + "₫" + "</span>"
+                            + "<span class='product__item--price'>" + strPrice + "₫" + "</span>"
+                            + "<span class='lineThrough'>" + product.Price.ToString("#,##0") + "₫" + "</span>"
                             + "<button class='product__item--btn'>"
                             + "<i class='fa-solid fa-bag-shopping'></i> Chọn mua"
                             + "</button>"
@@ -38,10 +38,11 @@ namespace BTL_WebCoBan.pages
                     }
                     else
                     {
+                        string strPrice = product.Price.ToString("#,##0");
                         html += " <div class='product__item' '> "
                             + "<img class='product__item--img' src='" + product.Img + "' alt='Image Product'>"
                            + "<h5 class='product__item--name'>" + product.Name + "</h5>"
-                           + "<span class='product__item--price'>" + product.Price + "₫" + "</span>"
+                           + "<span class='product__item--price'>" + strPrice + "₫" + "</span>"
                            + "<button class='product__item--btn'>"
                            + "<i class='fa-solid fa-bag-shopping'></i> Chọn mua"
                            + "</button>"

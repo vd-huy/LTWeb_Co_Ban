@@ -222,14 +222,13 @@ body {
 }
 
 .product__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
 }
 
 .product__item {
-    width: 22%;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
     .product__item:hover {
@@ -437,16 +436,12 @@ body {
     /* product */
 
     .product__list {
-        justify-content: space-around;
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     .product__discount--title {
         width: 80%;
         font-size: 20px;
-    }
-
-    .product__item {
-        width: 45%;
     }
 
     /*Footer*/
